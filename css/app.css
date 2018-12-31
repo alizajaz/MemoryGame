@@ -170,3 +170,16 @@ visibility: hidden;
   padding:10px;
   margin:20px;
 }
+@media screen and (max-width: 670px) {
+  .deck{
+    width:480px;
+}
+  .deck .card {
+      width:100px;
+      height:100px;
+    }
+    .score-panel  {
+    width:300px;
+    }
+  }
+}
