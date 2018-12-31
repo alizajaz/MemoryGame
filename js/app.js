@@ -10,16 +10,11 @@ var movescounter = document.querySelector(".moves");
 
 var allstar = document.querySelectorAll(".stars li");
 var stars = document.querySelectorAll(".fa-star");
-
 var matchedCard = [];
-
-
 var clickoff = true;
 var xintervals;
 var sec = 0;
 var  Timer = document.querySelector(".timer");
-
-
 
   var modal = document.querySelector(".modal-background");
   var content = document.querySelector(".modal-content");
@@ -49,7 +44,7 @@ for (var i = 0; i < nodelist.length; i++) {
  }
 }
 shuffleDeck();
-
+//Card shuffle
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
     while (currentIndex !== 0) {
@@ -74,7 +69,7 @@ cards.addEventListener( 'click', ()=> {//  console.log(event);
     OpenCards.push(cards);//pushing click (cards)
 
     if(OpenCards.length === 2) {
-//3. Work on the matching logic
+//3.  The matching logic
        if (OpenCards[0].firstElementChild.className === OpenCards[1].firstElementChild.className){
          OpenCards[0].classList.add( "match","disable");
          OpenCards[1].classList.add( "match","disable");
@@ -109,14 +104,14 @@ moveCount();
 
 })
 });
-
+//winning condition
 function Gameover(){
 if(matchedCard.length === allCards.length){
   Congratulation();
 
 }
 }
-
+// The number of moves the player has made
 function moveCount() {
 
   moves++;
@@ -134,7 +129,8 @@ Rating();
 
 
 }
-
+//The player should begin with a certain number of stars displayed on the screen.
+//The number of moves made during the game should visually decrease this star rating
   function Rating (){
    if (moves > 10 && moves < 17){
         for( i= 0; i < allstar.length; i++){
@@ -154,7 +150,7 @@ Rating();
     }
   }
 
-
+//This timer should start when the player starts a game, and end when the player wins the game
   function startTimer() {
        xintervals = setInterval(ShowTime,1000);
   }
@@ -171,7 +167,7 @@ Rating();
   function stopTimer() {
       clearInterval(xintervals);
   }
-
+//pop-up card shows after you match 
   function Congratulation() {
 stopTimer();
 moveCount();
@@ -186,6 +182,7 @@ closeModal();
 
 
 }
+//When you click in closebtn, y
 function closeModal(){
 closebtn.addEventListener('click', () => {
 content.style.visibility = "hidden";
@@ -198,5 +195,5 @@ replaybtn.addEventListener('click',replayGame);
 function replayGame(){
   location.reload();
 content.style.visibility = "hidden";
-  // playGame();
+
 }
