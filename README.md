@@ -1,5 +1,4 @@
-# MemoryGame
-MemoryGame Udacity
+
 # Memory Game
 
 
