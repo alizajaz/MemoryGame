@@ -27,7 +27,7 @@ Additional Resources Sites:
 > 4.https://www.google.com/
 
 
-This ares some sites that  *actually* help me get through this project.
+This are some sites that  *actually* help me get through this project.
 
 ### How the Game Work
 
