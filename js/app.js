@@ -23,14 +23,14 @@ var  Timer = document.querySelector(".timer");
   var closebtn = document.querySelector(".closebtn");
   var modalbutton = document.querySelector(".modal-buttons");
 
-
+//A restart button allows the player to reset the game board, the timer, and the star rating.
 $(document).ready(function(){
   $('.restart').click(function(){
       location.reload();
   });
 });
 
-
+//Pushing nodelist yo array and The game randomly shuffles the cards. 
 function shuffleDeck(){
 const nodelist = document.querySelectorAll('.deck li');
 var myArray = []; // empty Array
